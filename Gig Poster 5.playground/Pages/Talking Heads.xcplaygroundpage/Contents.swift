@@ -53,9 +53,9 @@ canvas.fillColor = brightYellow
 for vert in 0...8{
     for hori in 0...8{
         var paralleclVertices: [Point] = []
-        paralleclVertices.append(Point(x: 0+hori*44, y: 200+vert*44))
-        paralleclVertices.append(Point(x: 47+hori*44, y: 200+vert*44))
-        paralleclVertices.append(Point(x: 47+hori*44, y: 244+vert*44))
+        paralleclVertices.append(Point(x: 1+hori*44, y: 201+vert*44))
+        paralleclVertices.append(Point(x: 48+hori*44, y: 201+vert*44))
+        paralleclVertices.append(Point(x: 48+hori*44, y: 245+vert*44))
         canvas.drawCustomShape(with: paralleclVertices)
     }
 }
@@ -65,14 +65,26 @@ canvas.fillColor = offWhite
 for shu in 0...7{
     for heng in 0...(0+shu){
         var paralleclVertices: [Point] = []
-        paralleclVertices.append(Point(x: 0+heng*44, y: 244+shu*44))
-        paralleclVertices.append(Point(x: 47+heng*44, y: 244+shu*44))
-        paralleclVertices.append(Point(x: 47+heng*44, y: 290+shu*44))
+        paralleclVertices.append(Point(x: 1+heng*44, y: 245+shu*44))
+        paralleclVertices.append(Point(x: 48+heng*44, y: 245+shu*44))
+        paralleclVertices.append(Point(x: 48+heng*44, y: 291+shu*44))
         canvas.drawCustomShape(with: paralleclVertices)
     }
 }
 
+//print title
+canvas.textColor = offWhite
+canvas.drawText(message: "talking heads", at: Point(x:15,y:140), size: 43)
 
+//print the lines below the titile
+canvas.drawText(message: "friday,saturday,sunday", at: Point(x:14,y:30), size: 8)
+canvas.drawText(message: "september 12, 13, 14, 1975", at: Point(x:14,y:20), size: 8)
+
+canvas.drawText(message: "at cbgb and omfug", at: Point(x:150,y:30), size: 8)
+canvas.drawText(message: "315 bowery, new york city", at: Point(x:150,y:20), size: 8)
+
+canvas.drawText(message: "also appearing:", at: Point(x:270,y:30), size: 8)
+canvas.drawText(message: "from brooklyn, the shirts", at: Point(x:270,y:20), size: 8)
 
 /*:
  ## Use Source Control
