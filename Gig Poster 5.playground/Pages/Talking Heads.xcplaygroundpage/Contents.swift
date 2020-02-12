@@ -42,7 +42,36 @@ let deepOrange = Color(hue: 8, saturation: 78, brightness: 93, alpha: 100)
 let offWhite = Color(hue: 81, saturation: 5, brightness: 88, alpha: 100)
 let brightYellow = Color(hue: 46, saturation: 71, brightness: 98, alpha: 100)
 
-// Begin your solution here...
+//orange background
+canvas.fillColor = deepOrange
+canvas.drawRectangle(at:Point(x: 0, y: 0), width: 400, height: 600)
+
+canvas.drawShapesWithBorders = false
+
+//yellow triangles
+canvas.fillColor = brightYellow
+for vert in 0...8{
+    for hori in 0...8{
+        var paralleclVertices: [Point] = []
+        paralleclVertices.append(Point(x: 0+hori*44, y: 200+vert*44))
+        paralleclVertices.append(Point(x: 47+hori*44, y: 200+vert*44))
+        paralleclVertices.append(Point(x: 47+hori*44, y: 244+vert*44))
+        canvas.drawCustomShape(with: paralleclVertices)
+    }
+}
+
+//white triangles
+canvas.fillColor = offWhite
+for shu in 0...7{
+    for heng in 0...(0+shu){
+        var paralleclVertices: [Point] = []
+        paralleclVertices.append(Point(x: 0+heng*44, y: 244+shu*44))
+        paralleclVertices.append(Point(x: 47+heng*44, y: 244+shu*44))
+        paralleclVertices.append(Point(x: 47+heng*44, y: 290+shu*44))
+        canvas.drawCustomShape(with: paralleclVertices)
+    }
+}
+
 
 
 /*:
